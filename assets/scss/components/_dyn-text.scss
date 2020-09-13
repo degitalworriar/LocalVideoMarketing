@@ -1,0 +1,32 @@
+// ==================================
+// SCSS/COMPONENTS/_DYN-TEXT.SCSS
+// ==================================
+
+/* Component: Did You Know & Text */
+.w-dyn-text {
+
+  &__headline {
+    margin-top: 0;
+    text-align: center;
+  }
+
+  @include bp-medium-min {
+    &__headline {
+      text-align: right;
+    }
+
+    &__dyn,
+    &__text {
+      float: left;
+    }
+
+    &__dyn {
+      width: per-calc( 230px );
+    }
+
+    &__text {
+      width: per-calc( 704px );
+      padding-left: 23px;
+    }
+  }
+}

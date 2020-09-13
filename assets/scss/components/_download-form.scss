@@ -1,0 +1,22 @@
+// ==================================
+// SCSS/COMPONENTS/_DOWNLOAD-FORM.SCSS
+// ==================================
+
+/* Component: Download Form */
+.w-download-form {
+  box-shadow: 0px 2px 4px rgba( #000, .75 );
+  padding: 0 10px 14px;
+  
+  &__headline {
+    border: 1px solid $color--primary;
+    padding: 8px 4px;
+    text-align: center;
+    margin: 0px -10px 11px;
+  }
+
+  &__form {
+    @include bp-medium-min {
+      @include center-with-width( 70% );
+    }
+  }
+}

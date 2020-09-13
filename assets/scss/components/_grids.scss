@@ -1,0 +1,60 @@
+// ==================================
+// SCSS/COMPONENTS/_GRIDS.SCSS
+// ==================================
+
+/* Component: Grids */
+@include grid( 12, $grid__gutter, 'w-row' );
+
+// Grid with Margins
+
+// .w-row {
+
+//   &__column {
+//     float: left;
+// 	  margin-left: 4%;
+    
+//     &:first-child {
+//     	margin-left: 0;
+//     }
+    
+//     &--one-two {
+// 			width: 48%;
+//     }
+
+//     &--one-three {
+//       width: 50%;
+//     }
+
+//     &--two-three {
+//       width: 65.33332%;
+//     }
+
+//     &--one-four {
+//       width: 22%;
+//     }
+
+//     &--three-four {
+//       width: 74%;
+//     }
+
+//     &--one-five {
+//       width: 16.8%;
+//     }
+
+//     &--two-five {
+//       width: 37.6%;
+//     }
+
+//     &--three-five {
+//       width: 58.4%;
+//     }
+
+//     &--four-five {
+//       width: 79.2%;
+//     }
+
+//     &--one-six {
+//       width: 13.33332%;
+//     }
+//   }
+// }

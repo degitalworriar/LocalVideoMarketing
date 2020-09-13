@@ -1,0 +1,30 @@
+// ==================================
+// SCSS/COMPONENTS/_BACKGROUNDS.SCSS
+// ==================================
+
+/* Component: Backgrounds */
+.bg-image,
+.bg-dark {
+  background: $background-color--dark;
+}
+
+.bg-image {
+  background: transparent no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.bg-primary {
+  background-color: $color--primary;
+  color: #fff;
+}
+
+.bg-gray {
+  background-color: #eee;
+}
+
+.bg-primary, .bg-dark {
+  h1, h2, h3, h4, h5, h6, 
+  .h1, .h2, .h3, .h4, .h5, .h6 {
+    color: #fff;
+  }
+}

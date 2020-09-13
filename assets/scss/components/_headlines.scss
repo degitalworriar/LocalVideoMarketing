@@ -1,0 +1,13 @@
+// ==================================
+// SCSS/COMPONENTS/_HEADLINES.SCSS
+// ==================================
+
+/* Component: Headlines */
+.w-headline {
+
+  &--color {
+    &-primary {
+      color: $color--primary;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+// =====================================
+// Importing Slick.scss file 
+// from Bower_components directory
+// =====================================
+
+@function image-url ( $url ) {
+  @return '../../../images/' + $url;
+}
+
+// Slick
+// @import "../../../bower_components/slick-carousel/slick/slick.scss";
+
+// Slick theme
+// @import "../../../bower_components/slick-carousel/slick/slick-theme.scss";

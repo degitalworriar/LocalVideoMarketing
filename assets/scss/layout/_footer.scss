@@ -1,0 +1,56 @@
+// ==================================
+// SCSS/LAYOUT/_FOOTER.SCSS
+// ==================================
+
+/* Footer */
+/* ========================= */
+
+$footer: 'w-footer';
+
+.#{$footer} {
+  padding: 25px 0;
+  color: #fff;
+  background-color: #212121;
+
+  &__text,
+  &__phone {
+    font-family: $font__family--sans-serif;
+    margin: 0;
+  }
+
+  // E: Headline
+  &__text {
+    @include font-size( 20px );
+    line-height: 1.25;
+  }
+
+  // E: Headline
+  &__phone {
+    margin-top: 10px;
+    line-height: 1;
+    color: #c02638;
+    @include font-size( 35px ); 
+    text-shadow: 0px 1px 4px rgba( #000, .75 );
+  }
+
+  @include bp-medium-min {
+    &__text,
+    &__phone {
+      font-family: $font__family--sans-serif;
+      float: left;
+      margin: 0;
+    }
+    
+    &__text {
+      @include font-size( 24px );
+      width: per-calc( 670px );
+    }
+
+    // E: Headline
+    &__phone {
+      width: per-calc( 264px );
+      @include font-size( 48px ); 
+      text-align: right;
+    }
+  }
+}

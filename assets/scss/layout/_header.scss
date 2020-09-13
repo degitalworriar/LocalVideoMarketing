@@ -1,0 +1,17 @@
+// ==================================
+// SCSS/LAYOUT/_HEADER.SCSS
+// ==================================
+
+$header: 'w-header';
+
+/* Header */
+/* ========================= */
+
+.#{$header} {
+  position: relative;
+  background-color: $color--primary;
+  border-bottom: 4px solid $color--dark;
+  padding: 20px 0 15px;
+  line-height: 1;
+  color: #fff;
+}

@@ -1,0 +1,19 @@
+// ==================================
+// SCSS/STATE/_MEDIUM.SCSS
+// ==================================
+
+// Above 768
+@include bp-medium-min {
+
+}
+
+// Below 767
+@include bp-medium {
+  h2, .h2 {
+    font-size: 223%;
+  }
+
+  h3, .h3 {
+    font-size: 174%;
+  }  
+}

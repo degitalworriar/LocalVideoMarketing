@@ -1,0 +1,34 @@
+// ==================================
+// SCSS/LAYOUT/_BANNER.SCSS
+// ==================================
+
+.banner {
+  position: relative;
+
+  // E: Image
+  &__image {
+    @include background( $position: center center, $size: cover, $repeat: no-repeat );
+    height: 297px;
+  }
+
+  // E: Inner
+  &__inner {
+    margin-bottom: 0;
+  }
+
+  // M: Home
+  &--home  {
+
+    // Slider
+    .banner__image {
+      height: 510px;
+    }
+  }
+
+  @include bp-large {
+    &__image {
+      height: 0;
+      padding-bottom: 56.6%;
+    }
+  }
+}

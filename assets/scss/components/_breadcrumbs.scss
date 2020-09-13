@@ -1,0 +1,27 @@
+// ==================================
+// SCSS/COMPONENTS/_BREADCRUMBS.SCSS
+// ==================================
+
+/* Component: Breadcrumbs */
+.w-breadcrumbs {
+  margin-left: 0;
+  padding-left: 0;
+  margin-bottom: 15px;
+
+  &__item {
+    list-style: none;
+    display: inline-block;
+    margin: 0 3px;
+
+    &:before {
+      content: '/';
+      margin-right: 6px;
+      color: $color--light;
+    }
+
+    &:first-child:before {
+      content: '';
+      margin-right: 0;
+    }
+  }
+}

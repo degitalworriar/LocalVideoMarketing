@@ -1,0 +1,60 @@
+// ==================================
+// SCSS/COMPONENTS/_LOGO.SCSS
+// ==================================
+
+/* Component: Logo */
+.w-logo {
+  @extend %clearfix;
+  color: #fff;
+  margin: 0;
+  line-height: 0.9;
+  @include font-size( 40px );
+
+  @include media( 1060px, true ) {
+    @include font-size( 62px );
+
+    span {
+      vertical-align: middle;
+    }
+
+    &__small {
+      @include font-size( 43px );
+    }
+
+    &__large {
+      @include font-size( 80px );
+    }
+
+    &__left {
+      width: per-calc( 343px, 1024px );
+      text-shadow: 0px 2px 4px rgba( #000, .75 );
+      float: left;
+      line-height: 0.76;
+    } 
+
+    &__right {
+      width: per-calc( 679px, 1024px );
+      position: relative;
+      padding-left: 40px;
+      float: right;
+    } 
+
+    &__rotated {
+      @include font-size( 55px );
+      @include position( $top: 25px, $left: -23px );
+      @include transform( scale(1) rotate( -90deg ) );
+      display: block;
+    }
+  }
+
+  @include media( 1060px ) {
+    text-align: center;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: 0.025em;
+
+    @include bp-medium-min {
+      @include font-size( 60px );
+    }
+  }
+}

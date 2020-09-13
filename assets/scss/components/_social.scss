@@ -1,0 +1,32 @@
+// ==================================
+// SCSS/COMPONENTS/_SOCIAL.SCSS
+// ==================================
+
+/* Component: Section */
+.w-social {
+  @include clearfix;
+
+  &__heading {
+    margin-right: 19px;
+    vertical-align: middle;
+    display: inline-block;
+  }
+
+  &__link {
+    @extend %transition--base;
+    display: inline-block;
+    margin-left: 19px;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+  }
+
+  &__icon {
+    vertical-align: top;
+  }
+}

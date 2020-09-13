@@ -1,0 +1,38 @@
+// ==================================
+// SCSS/COMPONENTS/_LISTS.SCSS
+// ==================================
+
+$list: '.w-list';
+
+/* Component: List */
+.w-list {
+  &--unstyled {
+    list-style: none;
+    margin: 0 0 15px;
+  }
+
+  &--inline {
+    display: inline-block;
+  }
+
+  &--tick {
+    padding: 0;
+    margin-left: 0;
+
+    #{$list}__item {
+      list-style: none;
+      padding-left: 20px;
+      @include bg-img-full( 'tick.png', $repeat: no-repeat, $position: left 6px );
+    }
+  }
+
+  &--bullets {
+    margin-left: 0;
+
+    #{$list}__item {
+      @include bg-img-full( 'bullet-red.png', $repeat: no-repeat, $position: 4px 9px );
+      padding-left: 21px;
+      list-style: none;
+    }
+  }
+}

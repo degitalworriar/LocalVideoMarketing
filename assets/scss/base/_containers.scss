@@ -1,0 +1,16 @@
+// ==================================
+// SCSS/BASE/_CONTAINERS.SCSS
+// ==================================
+
+.w-container {
+  @extend %clearfix;
+  max-width: $container__width + ( $container__gutter * 2 );
+  padding-left: $container__gutter;
+  padding-right: $container__gutter;
+  margin-left: auto;
+  margin-right: auto;
+
+  &--header {
+    max-width: 1024px + ( $container__gutter * 2 );
+  }
+}

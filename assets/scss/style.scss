@@ -1,0 +1,95 @@
+// ==================================
+// SCSS/STYLE.SCSS
+// ==================================
+
+// ==================================
+// All partials are imported here.
+// 
+// Author: Zeshan Ahmed 
+// URI: http://www.zeshanahmed.com/
+// ==================================
+
+// ================================== //
+// Functions, Mixins, Variables
+// ================================== //
+
+@import "bourbon/bourbon";
+@import "variables";
+@import "mixins";
+
+// ================================== // 
+// Base
+// ================================== //
+
+@import "base/fonts";
+@import "base/reset";
+@import "base/defaults";
+@import "base/containers";
+
+// ================================== // 
+// Layout
+// ================================== //
+
+// Extends
+@import "layout/extends";
+
+// Header
+@import "layout/header";
+@import "layout/header/navbar";
+
+// Banner
+@import "layout/banner";
+
+// Main
+@import "layout/main";
+@import "layout/main/content";
+// @import "layout/main/sidebar";
+
+// Footer
+@import "layout/footer";
+
+// ================================== // 
+// Components
+// ================================== //
+
+// Base
+@import "components/spacing";
+@import "components/utility";
+// @import "components/icons";
+@import "components/form";
+@import "components/grids";
+@import "components/buttons";
+// @import "components/backgrounds";
+// @import "components/section";
+@import "components/hr";
+
+// Elements
+@import "components/headlines";
+@import "components/blockquote";
+@import "components/list";
+@import "components/logo";
+// @import "components/nav";
+// @import "components/social";
+// @import "components/breadcrumbs";
+
+// Parts
+@import "components/dyn-text";
+@import "components/dyn";
+@import "components/text-form";
+@import "components/download-form";
+
+// ================================== // 
+// State
+// ================================== //
+
+@import "state/extends";
+@import "state/extra-large";
+@import "state/large";
+@import "state/medium";
+@import "state/small";
+
+// ================================== // 
+// Pages
+// ================================== //
+
+@import "pages";

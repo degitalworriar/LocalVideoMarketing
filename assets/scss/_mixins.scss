@@ -1,0 +1,362 @@
+// ==================================
+// SCSS/_MIXINS.SCSS
+// ==================================
+
+// ==================================
+// Table of Contents
+// 
+// 01. Spacing
+// 02. Background Image
+//   i. Background Image Full
+//  ii. Background Image Only
+// 03. All Colors
+// 04. All Headings Colors
+// 05. Pixel to Rem
+// 06. Breakpoints
+// 07. Opacity
+// 08. Vertically Centered
+// 09. Position
+// 10. Background Position
+// 11. Auto Center Vertically
+// 12. Pixel to Percentage
+// 13. Center with Width
+// 14. Grids
+// 
+// ==================================
+
+// 01. Spacing
+// ==================================
+
+// 
+// Creates spacing classes for paddings and margins
+// 
+// $type      = padding, margin
+// $multiple  = 1, 2, 5, 10... ; e.g. mt5, mt10, mt15...
+// $end       = 10, 20, 50... ; Number of times loop runs.
+// $direction = top, right, bottom, left ; set the direction
+// 
+
+@mixin spacing ( $type, $multiple, $end, $direction ) {
+  $class: m;
+
+  @if $type == padding {
+    $class: p;
+  } @else {
+    $class: m;
+  }
+
+  @for $i from 1 through $end {
+    @if $direction == top {
+      .#{$class}t#{$multiple * $i} {#{$type}-top: 1px*($multiple * $i); }
+    } @else if $direction == bottom {
+      .#{$class}b#{$multiple * $i} {#{$type}-bottom: 1px*($multiple * $i); }
+    } @else if $direction == left {
+      .#{$class}l#{$multiple * $i} {#{$type}-left: 1px*($multiple * $i); }
+    } @else if $direction == right {
+      .#{$class}r#{$multiple * $i} {#{$type}-left: 1px*($multiple * $i); }
+    }
+  }
+}
+
+// 02. Background Image
+// ==================================
+
+// 
+// $path--image variable should be in your _variables.scss file, e.g. 
+// $path--image: '../images'
+// 
+
+@mixin bg-img-full ( $path, $color: transparent, $repeat: no-repeat, $position: 0 0 ) {
+  background: $color url('#{$path--image}/#{$path}') $repeat $position;
+}
+
+@mixin bg-img-only ( $path ) {
+  background-image: url('#{$path--image}/#{$path}');
+}
+
+// 03. All Colors
+// ==================================
+
+// 
+// Replace all text color inside an element. 
+// Useful to use on dark background to achieve light text color
+// 
+
+@mixin all-colors ( $color ) {
+  color: $color;
+
+  h1, h2, h3, h4, h5, h6, a {
+    color: $color;
+  }
+}
+
+// 04. All Headings Colors
+// ==================================
+
+// 
+// Replace all headings color inside an element. 
+// Useful to use on dark background to achieve light headings color
+// 
+
+@mixin all-headings-colors( $color ) {
+  h1, h2, h3, h4, h5, h6 {
+    color: $color;
+  }
+}
+
+// 05. Pixel to Rem
+// ==================================
+
+@function calculate-rem ($size) {
+  $rem-size: $size / 10px;
+  @return $rem-size * 1rem;
+}
+
+@mixin font-size ($size) {
+  font-size: $size;
+  font-size: calculate-rem($size);
+}
+
+// 06. Breakpoints
+// ==================================
+
+// Media Only 
+
+@mixin media ( $width, $upper: false ) {
+  @if $upper == true {
+    @media screen and ( min-width: $width + 1 ) {
+      @content;
+    }
+  } @else {
+    @media screen and ( max-width: $width ) {
+      @content;
+    }
+  }
+}
+
+// Max Width
+
+// 
+// Default following variables in your _variabls.scss file:
+// $media-exlarge : 1400px;
+// $media-query--large   : 992px;
+// $media-query--medium  : 767px;
+// $media-query--small   : 480px;
+// 
+
+@mixin bp-x-large {
+  @media screen and (max-width: $media-query--extra-large) {
+    @content;
+  }
+}
+
+@mixin bp-large {
+  @media screen and (max-width: $media-query--large) {
+    @content;
+  }
+}
+
+@mixin bp-medium {
+  @media screen and (max-width: $media-query--medium) {
+    @content;
+  }
+}
+
+@mixin bp-small {
+  @media screen and (max-width: $media-query--small) {
+    @content;
+  }
+}
+
+// Min Width
+
+@mixin bp-x-large-min {
+  @media screen and (min-width: $media-query--extra-large + 1) {
+    @content;
+  }
+}
+
+@mixin bp-large-min {
+  @media screen and (min-width: $media-query--large + 1) {
+    @content;
+  }
+}
+
+@mixin bp-medium-min {
+  @media screen and (min-width: $media-query--medium + 1) {
+    @content;
+  }
+}
+
+@mixin bp-small-min {
+  @media screen and (min-width: $media-query--small + 1) {
+    @content;
+  }
+}
+
+// 07. Opacity
+// ==================================
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+// 08. Vertically Centered
+// ==================================
+
+// 
+// $height: add fixed height (must)
+// $selector: add child selector to assign "vertical-align: middle;" (optional)
+//            
+
+@mixin vertical-center( $height, $selector: null ) {
+  display: block;
+  height: $height;
+
+  @if $selector != null {
+    #{$selector} {
+      vertical-align: middle;
+    }
+  }
+
+  &:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+}
+
+// 09. Position
+// ==================================
+
+@mixin position ( $position: 'absolute', $width: null, $height: null, $top: null, $right: null, $bottom: null, $left: null, $index: null ) {
+  position: #{$position};
+  width: $width;
+  height: $height;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  z-index: $index;
+}
+
+// 10. Background Position
+// ==================================
+
+@mixin background ( $color: null, $repeat: null, $size: null, $attachment: null, $position: null ) {
+  background-color: $color;
+  background-repeat: #{$repeat};
+  background-size: #{$size};
+  background-attachment: #{$attachment};
+  background-position: $position;
+}
+
+// 11. Background Opacity
+// ==================================
+
+@mixin background-opacity ( $color, $opacity: 0.85 ) {
+  background-color: $color;
+  background-color: rgba($color, $opacity);
+}
+
+// 12. Auto Center Vertically - DEPRECATED
+// WILL BE REMOVED SOON
+// ==================================
+
+// 
+// The element should have position: absolute/fixed
+// 
+// Only add Width and Height of the element.
+// Set $size-add to true if you want to generate width and height of the element
+// Set $position to true if you want to generate vertical positioning
+// It will position the element vertically centered
+// 
+// After that, add a class of "pos-mid" to the element to center it vertically
+// 
+
+// @mixin icon-pos-ver-center( $width, $height, $size-add: false, $position: false ) {
+//   @if $size-add == true {
+//     @include size($width $height);
+//   }
+
+//   @if $position == true {
+//     &.pos-mid {
+//       top: 50%;
+//       margin-top: - ceil(( $height / 2 ));
+//     }
+//   }
+// }
+
+// 12. Pixel to Percentage
+// ==================================
+
+// 
+// Depending on the container's width
+// Can set $container to any value, e.g. 1000px
+// And the percentage will be calculated
+// based on container's value
+// 
+
+@function per-calc( $width, $container: $container__width ) {
+  @return percentage( $width / $container );
+}
+
+// 13. Center with Width
+// ==================================
+
+// 
+// @param $width specifies  the width you want for an element
+// @param $margin-left      set either to left, right or auto, default 'auto'
+// @param $margin-right     set either to left, right or auto, default 'auto'
+// 
+
+@mixin center-with-width( $width, $margin-left: auto, $margin-right: auto ) {
+  max-width: $width;
+  margin-left: $margin-left;
+  margin-right: $margin-right;
+}
+
+// 14. Grids
+// ==================================
+
+// 
+// This mixin will create a grid with the number of columns given. Columns
+// numbers will be in English e.g. 'five' or 'seven' and up to 'twelve'
+// 
+// @param   $number     enter the number of columns you want to create.
+// @param   $gutter     enter the gutter value in pixels or percentage.
+// @param   $row-class  enter the class for your row, e.g. 'w-row'
+// 
+// Example
+// 
+// @include grid( 6, 10px, '.w-row' );
+//
+
+@mixin grid( $number, $gutter, $row-class ) {
+  $column-number: $number + 1;
+  $columns: (
+    "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve"
+  );
+
+  .#{$row-class} {
+    @extend %clearfix;
+    margin-left: -$gutter;
+    margin-right: -$gutter;
+    margin-bottom: $gutter;
+
+    &__column {
+      float: left;
+      padding-left: $gutter;
+      padding-right: $gutter;
+
+      @for $i from 1 to $column-number {
+        &--#{ nth( $columns, $i ) } {
+          width: ( 100% * $i ) / $number;
+        }
+      }
+    }
+  }
+}

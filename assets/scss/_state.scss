@@ -1,0 +1,19 @@
+// ==================================
+// SCSS/_STATE.SCSS
+// ==================================
+
+// Extends. Can specify extends in this partial
+// that can be used throughout the project. 
+@import "state/extends";
+
+// Extra Large ~= 1400px
+@import "state/extra-large";
+
+// Large ~= 992px
+@import "state/large";
+
+// Medium ~= 767px
+@import "state/medium";
+
+// Small ~= 480px
+@import "state/small";

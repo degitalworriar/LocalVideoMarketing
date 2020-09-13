@@ -1,0 +1,25 @@
+// ==================================
+// SCSS/COMPONENTS/_BLOCKQUOTE.SCSS
+// ==================================
+
+/* Component: Blockquote */
+.w-blockquote {
+  font-weight: $font__weight--semi-bold;
+  color: $color--primary;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  font-style: italic;
+  @include font-size( $font__size--large );
+
+  // E: Quote
+  &__quote {
+    &:before {
+      content: '" ';
+    }
+
+    &:after {
+      content: ' "';
+    }
+  }
+}

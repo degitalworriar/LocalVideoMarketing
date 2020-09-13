@@ -1,0 +1,49 @@
+// ==================================
+// SCSS/_COMPONENTS.SCSS
+// ==================================
+
+/* Components - Vendor: Contact Form 7 Basic Styling */
+body div.wpcf7 {
+  .wpcf7-not-valid {
+    background-color: #FFD8D8;
+    border-color: #FF9494;
+  }
+
+  span.wpcf7-not-valid-tip {
+    display: none;
+  }
+
+  div.wpcf7-response-output {
+    display: block;
+    margin: 7px 0 0;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-align: center;
+    @include font-size( $font__size--small );
+
+    &.wpcf7-mail-sent-ok {
+      background-color: #5da105;
+      color: #fff;
+    }
+
+    &.wpcf7-validation-errors {
+      background-color: #FFFCCB;
+      color: $text__color--base;
+    }
+
+    &.wpcf7-mail-sent-ng {
+      border-color: #FF4A4A;
+    }
+
+    &.wpcf7-display-none {
+      display: none;
+    }
+  }
+
+  img.ajax-loader {
+    @include bp-medium-min {
+      float: right;
+      margin-top: 22px;
+    }
+  }
+}

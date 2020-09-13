@@ -1,0 +1,125 @@
+// ==================================
+// SCSS/BASE/_DEFAULTS.SCSS
+// ==================================
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  @include font-size( $font__size--base ); 
+  font-family: $font__family--primary;
+  line-height: $line-height--base;
+  font-weight: $font__weight--normal;
+  color: $text__color--base;
+  @include background( $size: cover, $repeat: no-repeat, $position: right bottom );
+  @include bg-img-only( 'bg.png' );
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+strong {
+  font-weight: $font__weight--bold;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+input, textarea {
+  font-family: $font__family--primary;
+}
+input[type="submit"] {
+  -webkit-appearance: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: $margin__hr;
+}
+img {
+  max-width: 100%;
+  vertical-align: top;
+  height: auto;
+}
+
+p {
+  margin: $text__margin;
+}
+
+h1, h2, h3, h4, h5, h6, 
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  color: $heading__color--base;
+  font-family: $heading__font-family;
+  line-height: $heading__line-height;
+  font-weight: $font__weight--normal;
+  margin: $heading__margin;
+}
+
+h1, .h1 {
+  font-size: $heading__font-size--h1;
+}
+
+h2, .h2 {
+  font-size: $heading__font-size--h2;
+}
+
+h3, .h3 {
+  font-size: $heading__font-size--h3;
+}
+
+h4, .h4 {
+  font-size: $heading__font-size--h4;
+}
+
+h5, .h5 {
+  font-size: $heading__font-size--h5;
+}
+
+h6, h6 {
+  font-size: $heading__font-size--h6;
+}
+ul, ol {
+  margin: $margin--base;
+  margin-left: 35px;
+
+  ul, ol {
+    margin: 0.5em 0 0.5em 25px;
+  }
+}
+iframe {
+  max-width: 100%;
+  max-height: 100%;
+  vertical-align: top;
+}
+
+blockquote {
+  margin: $margin__blockquote;
+}
+
+a {
+  color: $link__color--base;
+  text-decoration: #{$link__decoration};
+
+  img {
+    @extend %transition--base;
+  }
+  &:hover {
+    color: $link__color--hover;
+
+    img {
+      opacity: 0.85;
+    }
+  }
+}

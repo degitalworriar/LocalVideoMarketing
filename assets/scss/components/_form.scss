@@ -1,0 +1,68 @@
+// ==================================
+// SCSS/COMPONENTS/_LISTS.SCSS
+// ==================================
+
+/* Component: Form */
+.w-form {
+
+  // Field
+  &__field {
+    @include background( $color: #fff );
+    @include font-size( $input__font-size );
+    vertical-align: top;
+    color: $text__color--base;
+    padding: 11px 15px;
+    border: none;
+    text-align: center;
+    display: block;
+    width: 100%;
+    box-shadow: inset 0px 1px 4px rgba( #000, .75 );
+
+    @include placeholder {
+      color: #959595;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      @extend %transition--base;
+      outline: none;
+      box-shadow: inset 0px 1px 5px rgba( #000, .85 );
+    }
+  }
+
+  // Submit
+  &__submit {
+    text-transform: uppercase;
+    margin-top: 7px;
+    cursor: pointer;
+    width: 100%;
+    display: block;
+  }
+
+  // Group
+  &__group {
+    margin: 7px 0 0;
+
+    &--first,
+    &--submit,
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  // M: Form Horizontal
+  &--horizontal {
+    .form__field {
+      width: 100%;
+    }
+  }
+
+  // M: Form Inline
+  &--inline {
+    .form__group {
+      display: inline-block;
+      margin-bottom: 0;
+    }
+  }
+}

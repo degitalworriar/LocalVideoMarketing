@@ -1,0 +1,79 @@
+// ==================================
+// SCSS/COMPONENTS/_NAV.SCSS
+// ==================================
+
+$nav: 'w-nav';
+
+/* Component: Nav */
+.#{$nav} {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+
+  @include bp-large-min {
+    display: inline !important;
+    display: inline-block !important;
+
+    // E: Item
+    &__item {
+      float: left;
+      margin-left: 35px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  // E: Link
+  &__link {
+    color: $nav__link-color--base;
+    text-decoration: #{$nav__link-decoration};
+
+    &:hover {
+      color: $nav__link-color--hover;
+    }
+  }
+}
+
+// 
+// M: Is Navbar
+// 
+
+.#{$nav}--is-navbar {
+  .#{$nav}__item {
+    
+  }
+
+  .#{$nav}__link {
+    color: $navbar__link-color--base;
+    text-decoration: #{$navbar__link-decoration};
+    padding: $navbar__link-padding;
+    font-weight: $navbar__link-font--weight;
+    display: block;
+
+    &:hover {
+      color: $navbar__link-color--hover;
+    }
+  }
+}
+
+// 
+// M: Is Vertical
+// 
+
+.#{$nav}--is-vertical {
+
+  .#{$nav}__item {
+    display: block;
+    float: none;
+    margin-top: 5px;
+    padding-left: 0;
+    margin-left: 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}

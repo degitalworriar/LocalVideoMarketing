@@ -1,0 +1,244 @@
+// ==================================
+// SCSS/_VARIABLES.SCSS
+// ==================================
+
+// ========================================= //
+// Values
+// ========================================= //
+
+// Padding
+// ======================== //
+
+// Margin
+// ======================== //
+
+$margin--base    : 0 0 1.0714285714em;
+$margin--large   : 0 0 1.513em;
+$margin--large   : 0 0 1.113em;
+
+$margin__heading    : 1.25em 0 0.2em;
+$margin__blockquote : 1.313em 0 1.313em 35px;
+$margin__hr         : 1.75em 0px;
+
+// Border Radius
+// ======================== //
+
+$border-radius--base  : 5px;
+$border-radius--small : 2px;
+$border-radius--large : 8px;
+
+// Transition
+// ======================== //
+
+$transition--base   : '0.25s';
+$transition--slow   : '0.35s';
+$transition--fast   : '0.15s';
+
+$transition--extend : '#{$transition--base} all ease-in-out';
+
+// ========================================= //
+// Base
+// ========================================= //
+ 
+// Container & Gutter Size
+// ======================== //
+
+$container__width  : 934px;
+$container__gutter : 15px;
+ 
+// Color
+// ======================== //
+
+$color--primary        : #ae1d2e;
+$color--primary-dark   : darken( $color--primary, 8% );
+$color--secondary      : #dc047b;
+$color--secondary-dark : darken( $color--secondary, 8% );
+$color--dark           : #3f4245; 
+$color--light          : #879196;
+ 
+// Fonts
+// ======================== //
+
+$font__family--base       : Helvetica, Arial, Sans-serif;
+$font__family--base-serif : Times, Serif;
+$font__family--primary    : 'Open Sans', $font__family--base;
+$font__family--sans-serif : 'Bebas Neue', $font__family--base;
+$font__family--serif      : 'Times New Roman', $font__family--base-serif;
+
+// Fonts: Size
+$font__size--base  : 14px;
+$font__size--small : ceil( $font__size--base * 0.875 );
+$font__size--large : ceil( $font__size--base * 1.125 );
+
+// Fonts: Weight
+$font__weight--thin        : 100;
+$font__weight--extra-light : 200;
+$font__weight--light       : 300;
+$font__weight--normal      : 400;
+$font__weight--medium      : 500;
+$font__weight--semi-bold   : 600;
+$font__weight--bold        : 700;
+$font__weight--bolder      : 800;
+$font__weight--extra-bold  : 800;
+ 
+// Line Height
+// ======================== //
+
+$line-height--base  : 1.7142857143;
+$line-height--large : $line-height--base * 1.125;
+$line-height--small : $line-height--base * 0.875;
+ 
+// Media Queries Breakpoints
+// ======================== //
+
+$media-query--extra-large : 1400px;
+$media-query--large       : 991px;
+$media-query--medium      : 767px;
+$media-query--small       : 480px;
+ 
+// Paths
+// ======================== //
+
+$path--image : '../images';
+$path--font  : '../fonts';
+
+// Backgrounds
+// ======================== //
+
+$background-color--primary    : $color--primary;
+$background-color--secondary  : $color--secondary;
+$background-color--dark       : $color--dark;
+$background-color--light      : $color--light;
+$background-color--light-gray : #ededed;
+
+// Text Color
+$background-color--dark-text : #fff;
+
+// Text
+// ======================== //
+
+// Text: Color
+$text__color--base  : #212121;
+$text__color--light : $color--light;
+$text__color--dark  : $color--dark;
+
+// ========================================= //
+// Elements
+// ========================================= //
+
+// Text: Font Size
+$text__font-size--base  : $font__size--base;
+$text__font-size--small : $font__size--small;
+$text__font-size--large : $font__size--large;
+
+// Text: Line Height
+$text__line-height : $line-height--base;
+
+// Text: Margin
+$text__margin : $margin--base;
+ 
+// Links
+// ======================== //
+
+// Color
+$link__color--base  : $color--primary;
+$link__color--hover : $color--primary-dark;
+
+// Decoration
+$link__decoration: 'none';
+ 
+// Navbar
+// ======================== //
+
+// Navbar Link: Color
+$navbar__link-color--base  : $color--primary;
+$navbar__link-color--hover : $color--primary-dark;
+
+// Navbar Link: Padding
+$navbar__link-padding : 10px 20px;
+
+// Navbar Link: Decoration
+$navbar__link-decoration : 'none';
+
+// Navbar Link: Font
+$navbar__link-font--weight : $font__weight--normal;
+
+// Nav
+// ======================== //
+
+$nav__link-color--base  : $color--primary;
+$nav__link-color--hover : $color--primary-dark;
+
+// Nav Link: Decoration
+$nav__link-decoration: 'none';
+
+// Headings
+// ======================== //
+
+// Color
+$heading__color--base  : #222222;
+$heading__color--hover : darken( $heading__color--base, 8% );
+
+// Font Family
+$heading__font-family : $font__family--sans-serif;
+
+// Font Size
+$heading__font-size--h1   : 392%;
+$heading__font-size--h2   : 283%;
+$heading__font-size--h3   : 214%;
+$heading__font-size--h4   : 180%;
+$heading__font-size--h5   : 150%;
+$heading__font-size--h6   : 135%;
+
+// Line Height
+$heading__line-height : $line-height--base * 0.75;
+
+// Margin
+$heading__margin : $margin__heading;
+ 
+// Forms
+// ======================== //
+
+// Input
+$input__font-size        : $font__size--base;
+$input__font-family      : $font__family--base;
+$input__padding          : 10px 20px;
+$input__background-color : #fff;
+$input__border-color     : #ddd;
+ 
+// Buttons
+// ======================== //
+
+$button__font-size        : $font__size--base;
+$button__font-size--small : $font__size--small;
+$button__font-size--large : $font__size--large;
+$button__line-height      : $line-height--base;
+$button__border           : 'none'; // '1px solid #fff'
+$button__border-radius    : 0px;
+
+// Button: Padding
+$button__padding        : 10px 20px;
+$button__padding--small : 7px 14px;
+$button__padding--large : 13px 26px;
+
+// Button: Primary
+$button--primary-color-text             : #fff;
+$button--primary-color-background       : $color--primary;
+$button--primary-color-background-hover : $color--primary-dark;
+$button--primary-color-border           : $color--primary-dark;
+
+// Button: Secondary
+$button--secondary-color-text             : #fff;
+$button--secondary-color-background       : $color--secondary;
+$button--secondary-color-background-hover : $color--secondary-dark;
+$button--secondary-color-border           : $color--secondary-dark;
+
+// Button: Transparent
+$button--transparent-color-border       : $color--primary-dark;
+$button--transparent-color-border-hover : darken( $color--primary-dark, 8% );
+
+// Grids
+// ======================== //
+
+$grid__width  : $container__width;
+$grid__gutter : 11px;

@@ -1,0 +1,24 @@
+// ==================================
+// SCSS/COMPONENTS/_TEXT-FORM.SCSS
+// ==================================
+
+/* Component: Text Form */
+.w-text-form {
+  margin-top: 20px;
+
+  @include bp-medium-min {
+    &__text,
+    &__form {
+      float: left;
+    }
+
+    &__text {
+      width: per-calc( 540px );
+      padding-right: 20px;
+    }
+
+    &__form {
+      width: per-calc( 394px );
+    }
+  }
+}

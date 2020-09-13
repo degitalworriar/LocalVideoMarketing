@@ -1,0 +1,102 @@
+// ==================================
+// SCSS/COMPONENTS/_SECTION.SCSS
+// ==================================
+
+/* Component: Section */
+.w-section {
+  padding: 60px 0;
+
+  // Backgrounds
+  &--bg {
+    &-grey {
+      background-color: $background-color--light;
+    }
+  }
+
+  // Row
+  &__row {
+    @extend %clearfix;
+  }
+
+  // Columns
+  &--two-cols {
+    @include bp-medium-min {
+      display: table;
+      width: 100%;
+
+      .section__col {
+        display: table-cell;
+        vertical-align: middle;
+        width: 47%;
+
+        &--right {
+          width: 53%;
+          padding-left: 6%;
+        }
+      }
+    }
+    
+    @include bp-medium {
+      text-align: center;
+
+      .section__col {
+        margin-top: 25px;
+
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  // Heading 
+  &__heading {
+    .icon {
+      vertical-align: top;
+      margin-top: 16px;
+
+      @include bp-large {
+        width: 23px;
+        height: 23px;
+        margin-top: 13px;
+        margin-right: 5px;
+      }
+
+      @include bp-medium {
+        width: 20px;
+        height: 20px;
+        margin-top: 8px;
+        margin-right: 5px;
+      }
+
+      @include bp-small {
+        width: 15px;
+        height: 15px;
+        margin-top: 7px;
+        margin-right: 5px;
+      }
+    }
+
+    // Section Heading with Gradient
+    &--gradient {
+      background: -webkit-linear-gradient( #0b8092, #3db2c4 );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  // Text
+  &__text {
+    @include bp-medium {
+      br {
+        display: none !important;
+      }
+    }
+  }
+
+  p:last-child,
+  p:only-child,
+  p:empty {
+    margin-bottom: 0;
+  }
+}

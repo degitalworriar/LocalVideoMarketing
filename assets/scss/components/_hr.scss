@@ -1,0 +1,25 @@
+// ==================================
+// SCSS/COMPONENTS/_HR.SCSS
+// ==================================
+
+/* Component: HR */
+.w-hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: $margin__hr;
+
+  // M: Primary
+  &--primary {
+    background-color: $color--primary;
+  }
+
+  // M: Secondary
+  &--secondary {
+    background-color: $color--secondary;
+  }
+
+  // M: Dark
+  &--dark {
+    background-color: $color--dark;
+  }
+}

@@ -1,0 +1,15 @@
+// ==================================
+// SCSS/LAYOUT/_MAIN.SCSS
+// ==================================
+
+/* Main */
+/* ========================= */
+
+.w-main {
+  
+  // M: Container - Adds margin top and bottom.
+  &--has-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}

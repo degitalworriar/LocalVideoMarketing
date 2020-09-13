@@ -1,0 +1,49 @@
+// ==================================
+// SCSS/COMPONENTS/_ICONS.SCSS
+// ==================================
+
+/* Component: Icons */
+.w-icon {
+  // @include bg-img-full('icons/sample.png');
+  @include background( $size: contain, $position: left top, $repeat: no-repeat );
+  display: inline-block;
+  vertical-align: middle;
+
+  // 
+  // Social Icons
+  // 
+
+  &--facebook,
+  &--twitter,
+  &--googleplus {
+    @include bg-img-only( 'icons/social.png' );
+    background-size: auto;
+  }
+
+  // Facebook
+  &--facebook {
+    @include size( 19px 33px ); 
+    background-position: 0 0;
+  }
+
+  // Google+
+  &--googleplus { 
+    @include size( 35px 34px ); 
+    background-position: -37px 0;
+  }
+
+  // Twitter
+  &--twitter {
+    @include size( 40px 31px ); 
+    background-position: -87px -3px;
+  }
+
+  // 
+  // Site Icons
+  // 
+
+  &--certificate {
+    @include size( 84px 64px );
+    @include bg-img-only( 'icons/certificate.png' );
+  }
+}

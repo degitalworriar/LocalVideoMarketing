@@ -1,0 +1,27 @@
+// ==================================
+// SCSS/COMPONENTS/_BUTTONS.SCSS
+// ==================================
+
+/* Component: Buttons */
+.w-button {
+  @extend %transition--base;
+  color: $color--primary;
+  @include font-size( $button__font-size );
+  border-radius: $button__border-radius;
+  border: #{$button__border};
+  padding: $button__padding;
+  display: inline-block;
+
+  // M: Primary
+  &--primary {
+    color: $button--primary-color-text;
+    background-color: $button--primary-color-background;
+
+    &:hover,
+    &:focus {
+      outline: none;
+      color: $button--primary-color-text;
+      background-color: $button--primary-color-background-hover;
+    }
+  }
+}
